@@ -15,10 +15,25 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans Pro", "sans-serif";
 }
+
+.container{
+  flex-direction: column;
+  justify-content: center;
+  display: flex; 
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

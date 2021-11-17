@@ -1,0 +1,22 @@
+.text_area{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+#tweet-text{
+  height: 2em;
+  background: transparent;
+  border: none;
+  border-bottom: solid;
+  outline: none;
+  margin-bottom: .5em;
+  resize: none;
+}
+
+.button_counter{
+  display: flex;
+  justify-content: space-between;
+  font-family: "bungee";
+}
+

@@ -1,0 +1,32 @@
+
+nav {
+  background-color: rgb(105, 142, 255);
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  color:#FFFFFF ;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  
+}
+
+#page_title{
+  font-family: "Bungee";
+  margin-left:  1.5em;
+}
+
+#write_up{
+  display: flex;
+  flex-direction: column;
+}
+
+.fas{
+  display: flex;
+  justify-content: center;
+  size: 50px;
+}
+
+#write_a_tweet {
+  margin-right:  1.5em;
+}
