@@ -1,8 +1,10 @@
 
 nav {
+  
+  position: fixed;
   background-color: rgb(105, 142, 255);
   display: flex;
-  flex-direction: row;
+  width: 100%;
   height: 120px;
   color:#FFFFFF ;
   justify-content: space-between;
@@ -29,4 +31,8 @@ nav {
 
 #write_a_tweet {
   margin-right:  1.5em;
+}
+
+header {
+  z-index: 0;
 }

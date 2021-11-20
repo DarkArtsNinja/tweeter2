@@ -17,7 +17,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   color: #545149;
   background-color: #f4f1ec;
@@ -34,7 +33,37 @@ body {
   
 }
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media (min-width: 800px) {
+
+   .header_and_main{
+     display: flex;
+     flex-direction: row;
+     /* align-items: stretch; */
+
+   }
+
+   header {
+    display: flex;
+    width: 50%;
+    margin-top: 500px;
+  }
+
+   .container{
+    flex-direction: column;
+    margin-top: 5em;
+
+    justify-content: center;
+    display: flex; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
+  }
+
+   .tweetcontainer {
+     width: 50vw
+   }
+ }
