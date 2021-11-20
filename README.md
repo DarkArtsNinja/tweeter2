@@ -21,5 +21,7 @@ Here are some screenshots:
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+    "body-parser": "^1.15.2",
+    "chance": "^1.0.2",
+    "express": "^4.17.1",
+    "md5": "^2.1.0"
