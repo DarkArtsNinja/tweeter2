@@ -36,13 +36,9 @@ const renderTweets = function (tweets) {
   // loops through tweets
   for (const i of tweets) {
     const new_tweet = createTweetElement(i);
-    // console.log("thisi is the new_tweet element:", new_tweet);
-    //change it in here
 
 
     $(".tweetcontainer").prepend(new_tweet);
-    // $(".tweetcontainer").prepend(document.createTextNode(new_tweet).innerHTML);
-    // $('tweetcontainter').prepend('<div/>'.text(new_tweet))  
   }
 
   // calls createTweetElement for each tweet
@@ -98,8 +94,6 @@ const createTweetElement = function (tweet) {
 const loadTweets = () => {
   $.ajax("/tweets", { method: 'GET', dataType: "json" })
     .then((all_the_tweets) => {
-      // console.log("data received: ", all_the_tweets);
-      // all_the_tweets= all_the_tweets.text();
       renderTweets(all_the_tweets);
 
     })
@@ -111,17 +105,17 @@ $(document).ready(function () {
 
   $.ajax("/tweets", { method: 'GET' })
     .then(function (submitted_tweet) {
-      // console.log('Success: ', submitted_tweet);
     });
 
   loadTweets();
-  // $("#errorMsg").html("");
 
   $(".text_area").submit((event) => {
     event.preventDefault();
     const textArea = $("#tweet-text");
 
     if (textArea.val().length > 140) {
+
+      //the following disappears the errorMsg by putting an empty string
       $('#errorMsg').text("");
       $('#errorMsg').show();
       $("#errorMsg").append("Nahh you wrote too much, cut the tweet to less that 140 chars");
@@ -130,7 +124,7 @@ $(document).ready(function () {
         })}, 3000);
 
       //instead of sliding down, use a create element and append it to the unique ID tag
-      // message is over 140 characters, cannot submit???
+
     }
 
     else if (textArea.val().length === 0) {
