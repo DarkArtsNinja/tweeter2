@@ -6,6 +6,8 @@
   margin-top: .5em;
 }
 
+
+
 article{
   display: flex;
   flex-direction: column;
@@ -15,6 +17,10 @@ article{
   border-width: 5px;
   padding: 1em;
   margin-bottom: 50px;
+}
+
+article:hover {
+  box-shadow: 5px 10px #888888;
 }
 
 .tweetcontainer_header{
@@ -58,6 +64,17 @@ footer{
 
   display: flex;
   flex-direction: row;
+}
+
+.fa-heart:hover {
+  color: goldenrod;
+}
+.fa-retweet:hover {
+  color: goldenrod;
+}
+
+.fa-flag:hover {
+  color: goldenrod;
 }
 
 @media (min-width: 800px) {

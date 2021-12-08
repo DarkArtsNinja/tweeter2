@@ -118,15 +118,10 @@ $(document).ready(function () {
   // $("#errorMsg").html("");
 
   $(".text_area").submit((event) => {
-    // console.log("this is the event here:", event);
     event.preventDefault();
     const textArea = $("#tweet-text");
-    // console.log("this is the textArea value:", textArea.val());
-    // console.log("this si the length of the textArea value:", textArea.val().length)
 
     if (textArea.val().length > 140) {
-      // console.log("if you see this it's over 140 chracters")
-      // $("#errorMsg").html("This tweet is empty, therefore cannot submit");
       $('#errorMsg').text("");
       $('#errorMsg').show();
       $("#errorMsg").append("Nahh you wrote too much, cut the tweet to less that 140 chars");
@@ -154,7 +149,10 @@ $(document).ready(function () {
       $("#errorMsg").text("");
       $.ajax("/tweets", { method: 'POST', data: $(".text_area").serialize() })
         .then(function (submitted_tweet) {
-          // console.log('Success: ', submitted_tweet);
+          console.log('Success: ', submitted_tweet);
+          
+          document.getElementById("tweet-text").value = "";
+          document.getElementById("counter").value = "140"
           loadTweets();
         });
 
